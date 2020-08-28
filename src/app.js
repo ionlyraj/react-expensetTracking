@@ -11,16 +11,6 @@ import getVisibleExpenses from './selectors/expenses';
 
 const store = configureStore();
 
-store.subscribe( () => {
-    const state = store.getState();
-    const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-    console.log(visibleExpenses);
-});
-
-store.dispatch(addExpense({description : 'Water bill', note: 'last month water bill', amount: 300, createdAt: 10021}));
-store.dispatch(addExpense({description: 'Gas bill', note: 'HP gas bill', amount: 800, createdAt: -1121}));
-store.dispatch(addExpense({description: 'Rent', note: 'final rent', amount: 20800, createdAt: 121}));
-
 const jsx = (
     <Provider store={store}>
         <AppRouter />
