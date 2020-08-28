@@ -1,0 +1,1 @@
+Use yarn add sass-loader@6.0.6 and yarn add node-sass
