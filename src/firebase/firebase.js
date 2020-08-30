@@ -24,23 +24,23 @@ export { firebase , database as default };
 //     createdAt: 107347773
 // });
 
-  firebase.database().ref().set({
-      name: 'Rajeev Kumar',
-      age: 36,
-      stressLevel: 6,
-      job: {
-          title: 'Software Engineer',
-          company: 'Google'
-      },
-      location: {
-          city: 'Bangalore',
-          country: 'India'
-      }
-  }).then( () => {
-      console.log('Data written to db');
-  }).catch((e)=>{
-      console.log('Error: ', e);
-  });
+//   firebase.database().ref().set({
+//       name: 'Rajeev Kumar',
+//       age: 36,
+//       stressLevel: 6,
+//       job: {
+//           title: 'Software Engineer',
+//           company: 'Google'
+//       },
+//       location: {
+//           city: 'Bangalore',
+//           country: 'India'
+//       }
+//   }).then( () => {
+//       console.log('Data written to db');
+//   }).catch((e)=>{
+//       console.log('Error: ', e);
+//   });
 
 // firebase.database().ref().update({
 //     stressLevel: 9,

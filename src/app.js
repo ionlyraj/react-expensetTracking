@@ -5,7 +5,7 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
-import { addExpense, removeExpense, editExpense } from './actions/expenses';
+import { startSetExpenses } from './actions/expenses';
 import { setStartDate, setEndDate, setTextFilter, sortByAmount, sortByDate } from './actions/filters';
 import getVisibleExpenses from './selectors/expenses';
 import firebase from './firebase/firebase';
@@ -18,4 +18,8 @@ const jsx = (
     </Provider>
 );
 
-ReactDOM.render(jsx, document.getElementsByClassName('root')[0]);
+ReactDOM.render(<p>loading...</p>, document.getElementsByClassName('root')[0]);
+
+store.dispatch(startSetExpenses()).then(() => {
+    ReactDOM.render(jsx, document.getElementsByClassName('root')[0]);
+});
