@@ -28,6 +28,15 @@ export const removeExpense = ({ id } = {}) => {
     }
 };
 
+export const startRemoveExpense = (expense) => {
+    return (dispath) => {
+        const { id } = expense;
+        return database.ref(`expenses/${id}`).remove().then(() => {
+            dispath(removeExpense({id}))
+        })
+    }
+};
+
 export const editExpense = (id, updates) => {
     return {
         type: 'EDIT_EXPENSE',
