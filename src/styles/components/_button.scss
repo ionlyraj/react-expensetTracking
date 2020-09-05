@@ -17,3 +17,15 @@
 .button--remove {
     background: #888;
 }
+
+.button--confirm {
+    background: #f00;
+    margin: 0 1rem 0 0;
+    border-radius: 5px;
+}
+
+.button--cancel {
+    background: #888;
+    margin: 0 0 0 1rem;
+    border-radius: 5px;
+}
